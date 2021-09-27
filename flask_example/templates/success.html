@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block title %}
+    Successed!
+{% endblock title %}
+
+{% block body %}
+
+    <h1 style="color: green;">You have successfully verified with Casdoor!</h1>
+
+    <p>Here is the current logged-in user's info</p>
+
+    {% for key, value in result.items() %}
+
+        <div style="float: left; font-weight: bold;">{{ key }}</div> <div style="float: left;">: {{ value }}</div>
+        <br>
+        
+    {% endfor %}
+
+{% endblock body %}
